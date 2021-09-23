@@ -1,0 +1,5 @@
+config = {
+    "WeatherAPI": "",
+    "Email": "",
+    "Password": "",
+}
