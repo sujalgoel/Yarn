@@ -1,6 +1,7 @@
 from word2number import w2n
 from bs4 import BeautifulSoup as bs
-import urllib.request, urllib.parse
+import urllib.parse
+import urllib.request
 
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
