@@ -31,9 +31,10 @@ from Functions.Miscellaneous.WikipediaSearch import WikipediaSearch
 
 
 # Greet Function
-# Greet()
-
-PlaySong()
+try:
+    Greet()
+except KeyboardInterrupt:
+    sys.exit()
 
 # Main Code
 while True:
