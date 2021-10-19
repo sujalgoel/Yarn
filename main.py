@@ -31,7 +31,9 @@ from Functions.Miscellaneous.WikipediaSearch import WikipediaSearch
 
 
 # Greet Function
-Greet()
+# Greet()
+
+PlaySong()
 
 # Main Code
 while True:

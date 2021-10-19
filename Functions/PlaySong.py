@@ -10,20 +10,19 @@ from pydub.playback import play
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
 
-
+# Example from https://github.com/ytdl-org/youtube-dl#embedding-youtube-dl
 def YTDL(url, Title):
     class MyLogger(object):
-        def debug(self, msg):
+        def debug(origin, msg):
             pass
 
-        def warning(self, msg):
+        def warning(origin, msg):
             pass
 
-        @staticmethod
-        def error(self, msg):
-            print(msg)
+        def error(origin, msg):
+            pass
 
-    def my_hook(d):
+    def hook(d):
         if d["status"] == "finished":
             print(
                 "\33[93m"
@@ -49,7 +48,7 @@ def YTDL(url, Title):
         ],
         "outtmpl": "/Music/%(title)s.%(ext)s",
         "logger": MyLogger(),
-        "progress_hooks": [my_hook],
+        "progress_hooks": [hook],
     }
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
@@ -67,7 +66,7 @@ def PlaySong():
         url = response["url"]
         Title = response["title"]
         FileExists = os.path.isfile("./Music/" + Title + ".mp3")
-        FileName = f"{os.getcwd()}\Music\{Title}.mp3"
+        FileName = f"{os.getcwd()}\\Music\\{Title}.mp3"
         if FileExists:
             print(
                 "\33[93m"
@@ -94,6 +93,7 @@ def PlaySong():
                 + "\33[1m"
                 + Title
                 + "\33[0m"
+                + "\n"
             )
             speak(f"Downloading {Title}")
             YTDL(url, Title)

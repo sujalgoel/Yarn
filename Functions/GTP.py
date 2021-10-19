@@ -13,11 +13,11 @@ def GTP():
     response = requests.get("https://fun-api.sujalgoel.engineer/pokemon").json()
 
     HiddenImage = requests.get(response["data"]["HiddenImage"]).content
-    HiddenImageFile = open(f"{MainDir}\Images\hidden-image.png", "wb")
+    HiddenImageFile = open(f"{MainDir}\\Images\\hidden-image.png", "wb")
     HiddenImageFile.write(HiddenImage)
     HiddenImageFile.close()
 
-    os.startfile(f"{MainDir}\Images\hidden-image.png")
+    os.startfile(f"{MainDir}\\Images\\hidden-image.png")
     print(
         "\33[93m"
         + "\33[1m"
@@ -50,10 +50,10 @@ def GTP():
             )
             speak(f"It was a {PokemonName}. You got it correct!")
             ShowImage = requests.get(response["data"]["ShowImage"]).content
-            ShowImageFile = open(f"{MainDir}\Images\show-image.png", "wb")
+            ShowImageFile = open(f"{MainDir}\\Images\\show-image.png", "wb")
             ShowImageFile.write(ShowImage)
             ShowImageFile.close()
-            os.startfile(f"{MainDir}\Images\show-image.png")
+            os.startfile(f"{MainDir}\\Images\\show-image.png")
             time.sleep(3)
             pyautogui.hotkey("alt", "f4")
             MidSound()
@@ -69,10 +69,10 @@ def GTP():
                 f"The pokémon isn't {UserInput} but it was a {PokemonName}. You got it wrong!"
             )
             ShowImage = requests.get(response["data"]["ShowImage"]).content
-            ShowImageFile = open(f"{MainDir}\Images\show-image.png", "wb")
+            ShowImageFile = open(f"{MainDir}\\Images\\show-image.png", "wb")
             ShowImageFile.write(ShowImage)
             ShowImageFile.close()
-            os.startfile(f"{MainDir}\Images\show-image.png")
+            os.startfile(f"{MainDir}\\Images\\show-image.png")
             time.sleep(3)
             pyautogui.hotkey("alt", "f4")
             MidSound()
@@ -86,10 +86,10 @@ def GTP():
         )
         speak(f"The pokémon which I chose was a {PokemonName}.")
         ShowImage = requests.get(response["data"]["ShowImage"]).content
-        ShowImageFile = open(f"{MainDir}\Images\show-image.png", "wb")
+        ShowImageFile = open(f"{MainDir}\\Images\\show-image.png", "wb")
         ShowImageFile.write(ShowImage)
         ShowImageFile.close()
-        os.startfile(f"{MainDir}\Images\show-image.png")
+        os.startfile(f"{MainDir}\\Images\\show-image.png")
         time.sleep(3)
         pyautogui.hotkey("alt", "f4")
         MidSound()
