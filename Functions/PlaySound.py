@@ -16,6 +16,7 @@ def MidSound():
     play(AudioSegment.from_mp3(f"{MainDir}\Sounds\MidSound.mp3"))
     time.sleep(0.2)
 
+
 def EndingSound():
     play(AudioSegment.from_mp3(f"{MainDir}\Sounds\EndingSound.mp3"))
     time.sleep(0.2)

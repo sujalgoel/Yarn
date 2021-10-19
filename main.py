@@ -1,3 +1,6 @@
+# regular import
+import sys
+
 # Regular Functions
 from Functions.RPS import RPS
 from Functions.GTP import GTP
@@ -27,7 +30,6 @@ from Functions.Miscellaneous.SendWhatsappMsg import SendWhatsappMsg
 from Functions.Miscellaneous.WikipediaSearch import WikipediaSearch
 
 
-
 # Greet Function
 Greet()
 
@@ -48,133 +50,133 @@ while True:
                     try:
                         OpenGoogle()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "open youtube" in command:
                     try:
                         OpenYoutube()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "time" in command in command:
                     try:
                         CurrentTime()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "joke" in command:
                     try:
                         TellmeaJoke()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "search on google" in command:
                     try:
                         GoogleSearch()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "search on youtube" in command:
                     try:
                         YouTubeSearch()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "play on youtube" in command:
                     try:
                         YouTubePlay()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "generate a password" in command:
                     try:
                         PasswordGen()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "search on wikipedia" in command:
                     try:
                         WikipediaSearch()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "send a whatsapp message" in command:
                     try:
                         SendWhatsappMsg()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "news" in command:
                     try:
                         NewsHeadlines()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "weather" in command:
                     try:
                         Weather()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "play a song" in command:
                     try:
                         PlaySong()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "advice" in command:
                     try:
                         GetAdvice()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "quote" in command:
                     try:
                         GetQuote()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "rock paper and scissors" in command:
                     try:
                         RPS()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "guess the pokemon" in command:
                     try:
                         GTP()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "lie swatter" in command:
                     try:
                         LieSwatter()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "guess the number" in command:
                     try:
                         GTN()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "trivia" in command:
                     try:
                         Trivia()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "send an email" in command:
                     try:
                         Email()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
                 elif "shutdown" in command:
                     try:
                         Quit()
                     except KeyboardInterrupt:
-                        quit()
+                        sys.exit()
 
     except KeyboardInterrupt:
-        quit()
+        sys.exit()

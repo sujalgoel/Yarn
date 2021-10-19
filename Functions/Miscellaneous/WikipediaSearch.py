@@ -3,6 +3,7 @@ import wikipedia
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
 
+
 def WikipediaSearch():
     print("\33[93m" + "\33[1m" + "What should I search on Wikipedia?" + "\33[0m" + "\n")
     speak("What should I search on Wikipedia?")

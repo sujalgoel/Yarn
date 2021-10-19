@@ -17,7 +17,13 @@ def Email():
         smtp.login(str(config["Email"]), str(config["Password"]))
         smtp.sendmail(str(config["Email"]), Email_to, message)
         smtp.quit()
-        print("\33[92m" + "\33[1m" + f"\nSuccessfully sent a mail to {Email_to}" + "\33[0m" + "\n")
+        print(
+            "\33[92m"
+            + "\33[1m"
+            + f"\nSuccessfully sent a mail to {Email_to}"
+            + "\33[0m"
+            + "\n"
+        )
         speak(f"Successfully sent a mail to {Email_to}")
         MidSound()
     else:

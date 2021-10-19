@@ -84,9 +84,7 @@ def GTP():
             + "\33[0m"
             + "\n"
         )
-        speak(
-            f"The pokémon which I chose was a {PokemonName}."
-        )
+        speak(f"The pokémon which I chose was a {PokemonName}.")
         ShowImage = requests.get(response["data"]["ShowImage"]).content
         ShowImageFile = open(f"{MainDir}\Images\show-image.png", "wb")
         ShowImageFile.write(ShowImage)

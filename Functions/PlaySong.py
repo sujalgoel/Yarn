@@ -19,6 +19,7 @@ def YTDL(url, Title):
         def warning(self, msg):
             pass
 
+        @staticmethod
         def error(self, msg):
             print(msg)
 

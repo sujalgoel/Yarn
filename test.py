@@ -45,3 +45,111 @@
 #         print(
 #             "It seems that you run out of lives.\nThe number which was guessed is", main
 #         )
+
+# import random
+
+# while True:
+#     print("\33[93m" + "\33[1m" + f"How many chances do you want?" + "\33[0m" + "\n")
+#     try:
+#         live = int(input())
+#     except ValueError:
+#         continue
+#     win = False
+#     guesses = 0
+#     num = random.randint(0, 1000)
+#     print(
+#         "\33[93m"
+#         + "\33[1m"
+#         + f"The number is chosen and you only have {live} chances to guess that number."
+#         + "\33[0m"
+#         + "\n"
+#     )
+#     while guesses < live:
+#         try:
+#             guess = int(input("Enter your guess: "))
+#             guesses += 1
+#         except ValueError:
+#             continue
+#         if guess == num:
+#             print(
+#                 "\33[92m"
+#                 + "\33[1m"
+#                 + "\nCongratulations, you have won the game in "
+#                 + "\33[0m"
+#                 + "\33[91m"
+#                 + "\33[1m"
+#                 + str(guesses)
+#                 + "\33[0m"
+#                 + "\33[92m"
+#                 + "\33[1m"
+#                 + f" {'guesses' if guesses > 1 else 'guess'}."
+#                 + "\33[0m"
+#                 + "\n"
+#             )
+#             win = True
+#             break
+#         elif guess < num:
+#             if (live - guesses) != 0:
+#                 print(
+#                     "\33[91m"
+#                     + "\33[1m"
+#                     + "\nThe number is greater than "
+#                     + "\33[0m"
+#                     + "\33[92m"
+#                     + "\33[1m"
+#                     + str(guess)
+#                     + "."
+#                     + "\33[0m"
+#                     + "\33[91m"
+#                     + "\33[1m"
+#                     + " You have "
+#                     + "\33[0m"
+#                     + "\33[92m"
+#                     + "\33[1m"
+#                     + str(live - guesses)
+#                     + "\33[0m"
+#                     + "\33[91m"
+#                     + "\33[1m"
+#                     + f" {'chances' if (live - guesses) > 1 else 'chance'} left."
+#                     + "\33[0m"
+#                     + "\n"
+#                 )
+#         elif guess > num:
+#             if (live - guesses) != 0:
+#                 print(
+#                     "\33[91m"
+#                     + "\33[1m"
+#                     + "\nThe number is smaller than "
+#                     + "\33[0m"
+#                     + "\33[92m"
+#                     + "\33[1m"
+#                     + str(guess)
+#                     + "."
+#                     + "\33[0m"
+#                     + "\33[91m"
+#                     + "\33[1m"
+#                     + " You have "
+#                     + "\33[0m"
+#                     + "\33[92m"
+#                     + "\33[1m"
+#                     + str(live - guesses)
+#                     + "\33[0m"
+#                     + "\33[91m"
+#                     + "\33[1m"
+#                     + f" {'chances' if (live - guesses) > 1 else 'chance'} left."
+#                     + "\33[0m"
+#                     + "\n"
+#                 )
+#     if guesses >= live:
+#         if win is False:
+#             print(
+#                 "\33[93m"
+#                 + "\33[1m"
+#                 + "\nIt seems that you ran out of chances. The number which I guessed was "
+#                 + "\33[0m"
+#                 + "\33[1m"
+#                 + str(num)
+#                 + "."
+#                 + "\33[0m"
+#                 + "\n"
+#             )
