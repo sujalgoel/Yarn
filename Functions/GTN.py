@@ -87,49 +87,47 @@ def GTN():
                     speak(
                         f"The number is greater than {guess}. You have {live - guesses} {'chances' if (live - guesses) > 1 else 'chance'} left."
                     )
-            elif guess > num:
-                if (live - guesses) != 0:
-                    print(
-                        "\33[91m"
-                        + "\33[1m"
-                        + "\nThe number is smaller than "
-                        + "\33[0m"
-                        + "\33[92m"
-                        + "\33[1m"
-                        + str(guess)
-                        + "."
-                        + "\33[0m"
-                        + "\33[91m"
-                        + "\33[1m"
-                        + " You have "
-                        + "\33[0m"
-                        + "\33[92m"
-                        + "\33[1m"
-                        + str(live - guesses)
-                        + "\33[0m"
-                        + "\33[91m"
-                        + "\33[1m"
-                        + f" {'chances' if (live - guesses) > 1 else 'chance'} left."
-                        + "\33[0m"
-                        + "\n"
-                    )
-                    speak(
-                        f"The number is smaller than {guess}. You have {live - guesses} {'chances' if (live - guesses) > 1 else 'chance'} left."
-                    )
-        if guesses >= live:
-            if win is False:
+            elif guess > num and (live - guesses) != 0:
                 print(
-                    "\33[93m"
+                    "\33[91m"
                     + "\33[1m"
-                    + "\nIt seems that you ran out of chances. The number which I guessed was "
+                    + "\nThe number is smaller than "
                     + "\33[0m"
+                    + "\33[92m"
                     + "\33[1m"
-                    + str(num)
+                    + str(guess)
                     + "."
+                    + "\33[0m"
+                    + "\33[91m"
+                    + "\33[1m"
+                    + " You have "
+                    + "\33[0m"
+                    + "\33[92m"
+                    + "\33[1m"
+                    + str(live - guesses)
+                    + "\33[0m"
+                    + "\33[91m"
+                    + "\33[1m"
+                    + f" {'chances' if (live - guesses) > 1 else 'chance'} left."
                     + "\33[0m"
                     + "\n"
                 )
                 speak(
-                    f"It seems that you ran out of chances. The number which I guessed was {num}."
+                    f"The number is smaller than {guess}. You have {live - guesses} {'chances' if (live - guesses) > 1 else 'chance'} left."
                 )
-                MidSound()
+        if guesses >= live and win is False:
+            print(
+                "\33[93m"
+                + "\33[1m"
+                + "\nIt seems that you ran out of chances. The number which I guessed was "
+                + "\33[0m"
+                + "\33[1m"
+                + str(num)
+                + "."
+                + "\33[0m"
+                + "\n"
+            )
+            speak(
+                f"It seems that you ran out of chances. The number which I guessed was {num}."
+            )
+            MidSound()
