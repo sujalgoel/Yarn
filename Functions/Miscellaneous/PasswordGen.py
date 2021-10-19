@@ -123,7 +123,7 @@ def PasswordGen():
                 pyperclip.copy(Password)
             else:
                 Password = ""
-                for i in range(w2n.word_to_num(length)):
+                for _ in range(w2n.word_to_num(length)):
                     Password = Password + random.choice(Allowed)
                 print("\33[1m" + "Password: " + "\33[92m" + Password + "\33[0m" + "\n")
                 speak("Your password has been generated and copied to the clipboard.")
@@ -131,5 +131,5 @@ def PasswordGen():
                 pyperclip.copy(Password)
         else:
             PasswordGen()
-    except Exception:
+    except ValueError:
         PasswordGen()

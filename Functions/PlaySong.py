@@ -13,13 +13,13 @@ from Functions.ProjectBase import speak, takeCommand
 # Example from https://github.com/ytdl-org/youtube-dl#embedding-youtube-dl
 def YTDL(url, Title):
     class MyLogger(object):
-        def debug(origin, msg):
+        def debug(self, msg):
             pass
 
-        def warning(origin, msg):
+        def warning(self, msg):
             pass
 
-        def error(origin, msg):
+        def error(self, msg):
             pass
 
     def hook(d):

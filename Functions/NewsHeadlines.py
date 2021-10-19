@@ -55,5 +55,5 @@ def NewsHeadlines():
 
         else:
             NewsHeadlines()
-    except Exception:
+    except ValueError:
         NewsHeadlines()

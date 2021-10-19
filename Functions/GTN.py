@@ -57,7 +57,8 @@ def GTN():
                 )
                 MidSound()
                 break
-            elif guess < num:
+
+            if guess < num:
                 if (live - guesses) != 0:
                     print(
                         "\33[91m"

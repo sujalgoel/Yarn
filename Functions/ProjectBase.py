@@ -22,6 +22,6 @@ def takeCommand():
     try:
         query = speech.recognize_google(audio, language="en-in")
         print("\33[92m" + "\33[1m" + "You said: " + "\33[0m" + query + "\n")
-    except Exception:
+    except sr.UnknownValueError:
         query = None
     return query
