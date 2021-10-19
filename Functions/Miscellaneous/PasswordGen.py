@@ -115,7 +115,7 @@ def PasswordGen():
                 if "yes" in special.lower():
                     Allowed += Symbols
                 Password = ""
-                for i in range(w2n.word_to_num(length)):
+                for _ in range(w2n.word_to_num(length)):
                     Password = Password + random.choice(Allowed)
                 print("\33[1m" + "Password: " + "\33[92m" + Password + "\33[0m" + "\n")
                 speak("Your password has been generated and copied to the clipboard.")

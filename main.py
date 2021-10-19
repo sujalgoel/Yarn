@@ -33,7 +33,7 @@ from Functions.Miscellaneous.WikipediaSearch import WikipediaSearch
 # Greet Function
 # Greet()
 
-NewsHeadlines()
+PlaySong()
 
 # Main Code
 while True:
