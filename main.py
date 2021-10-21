@@ -91,19 +91,19 @@ while True:
                     except KeyboardInterrupt:
                         sys.exit()
 
-                elif "generate a password" in command:
+                elif "password" in command:
                     try:
                         PasswordGen()
                     except KeyboardInterrupt:
                         sys.exit()
 
-                elif "search on wikipedia" in command:
+                elif "wikipedia" in command:
                     try:
                         WikipediaSearch()
                     except KeyboardInterrupt:
                         sys.exit()
 
-                elif "send a whatsapp message" in command:
+                elif "whatsapp" in command:
                     try:
                         SendWhatsappMsg()
                     except KeyboardInterrupt:
@@ -151,7 +151,7 @@ while True:
                     except KeyboardInterrupt:
                         sys.exit()
 
-                elif "lie swatter" in command:
+                elif "lie" or "lie swatter" in command:
                     try:
                         LieSwatter()
                     except KeyboardInterrupt:

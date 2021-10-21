@@ -37,11 +37,14 @@ def Trivia():
                 + "\33[0m"
             )
             speak(options[i])
-    userinput = takeCommand()
+    print("\33[93m" + "\33[1m" + "Enter the option (1/2/3/4): " + "\33[0m", end="")
+    speak("Enter the option")
+    userinput = int(input())
     if userinput:
-        if answer.lower() == userinput.lower():
+        if options.index(answer) == userinput - 1:
             print(
-                "\33[92m"
+                "\n"
+                + "\33[92m"
                 + "\33[1m"
                 + f"You are correct! It was {answer}."
                 + "\33[0m"
@@ -51,7 +54,8 @@ def Trivia():
             MidSound()
         else:
             print(
-                "\33[91m"
+                "\n"
+                + "\33[91m"
                 + "\33[1m"
                 + f"You are wrong! It was {answer}."
                 + "\33[0m"
