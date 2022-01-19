@@ -7,7 +7,8 @@ from Functions.PlaySound import MidSound
 
 def GetQuote():
     num = random.randint(1, 10)
-    response = requests.get("https://fun-api.sujalgoel.engineer/quote").json()
+    url = "https://api.sujalgoel.engineer/private/quote"
+    response = requests.get(url, headers={"User-agent": "Yarn@100305"}).json()
     quote = response["quote"]
     author = response["author"]
     if num % 2 == 0:

@@ -1,5 +1,6 @@
 import time
 import random
+from urllib import response
 import pyjokes
 import requests
 
@@ -16,7 +17,8 @@ def TellmeaJoke():
         LaughSound()
         MidSound()
     else:
-        response = requests.get("https://fun-api.sujalgoel.engineer/joke").json()
+        url = "https://api.sujalgoel.engineer/private/joke"
+        response = requests.get(url, headers = {'User-agent': 'Yarn@100305'}).json()
         joke = response["joke"]
         punchline = response["punchline"]
         print("\33[1m" + "Joke: " + "\33[92m" + joke + "\33[0m")
@@ -24,5 +26,5 @@ def TellmeaJoke():
         time.sleep(0.3)
         print("\33[1m" + "Punchline: " + "\33[92m" + punchline + "\33[0m" + "\n")
         speak(punchline)
-        MidSound()
         LaughSound()
+        MidSound()

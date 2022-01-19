@@ -61,9 +61,8 @@ def PlaySong():
     speak("What song do you want me to play?")
     song = takeCommand()
     if song:
-        response = requests.get(
-            f"https://fun-api.sujalgoel.engineer/ytsr?query={urllib.parse.quote(song)}"
-        ).json()
+        url = f"https://api.sujalgoel.engineer/private/ytsr?query={urllib.parse.quote(song)}"
+        response = requests.get(url, headers = {'User-agent': 'Yarn@100305'}).json()
         url = response["url"]
         Title = response["title"]
         Title = (

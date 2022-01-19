@@ -1,4 +1,6 @@
+*.txt
 *.png
+*.json
 test.py
 Config.py
 __pycache__

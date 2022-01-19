@@ -1,5 +1,5 @@
 import pyttsx3
-import speech_recognition as sr
+import speech_recognition
 
 from Functions.PlaySound import OpeningSound
 
@@ -14,14 +14,16 @@ def speak(text):
 
 
 def takeCommand():
-    speech = sr.Recognizer()
-    with sr.Microphone() as source:
+    speech = speech_recognition.Recognizer()
+    speech.pause_threshold = 0.5
+    with speech_recognition.Microphone(device_index=1) as AudioSource:
         OpeningSound()
         print("\33[31m" + "\33[1m" + "Listening..." + "\33[0m" + "\n")
-        audio = speech.listen(source)
+        speech.adjust_for_ambient_noise(AudioSource)
+        audio = speech.listen(AudioSource)
     try:
-        query = speech.recognize_google(audio, language="en-in")
+        query = speech.recognize_google(audio).lower()
         print("\33[92m" + "\33[1m" + "You said: " + "\33[0m" + query + "\n")
-    except sr.UnknownValueError:
+    except speech_recognition.UnknownValueError:
         query = None
     return query

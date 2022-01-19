@@ -23,10 +23,12 @@ def GTN():
         guesses += 1
         try:
             speak("Enter your guess.")
-            guess = int(input("Enter your guess: "))
+            print("\33[93m" + "\33[1m" + "Enter your guess: " + "\33[0m", end="")
+            guess = int(input())
         except ValueError:
             speak("Enter your guess.")
-            guess = int(input("Enter your guess: "))
+            print("\33[93m" + "\33[1m" + "Enter your guess: " + "\33[0m", end="")
+            guess = int(input())
         if guess == num:
             print(
                 "\33[92m"

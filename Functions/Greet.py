@@ -5,15 +5,15 @@ from Functions.PlaySound import OpeningSound, MidSound
 
 
 def Greet():
-    hour = datetime.datetime.now().hour
     greetings = ""
+    hour = datetime.datetime.now().hour
 
     OpeningSound()
 
-    if 5 >= hour < 12:
+    if hour >= 5 and hour <= 12:
         greetings = "Good morning sir!"
 
-    elif 12 >= hour < 18:
+    elif hour >= 12 and hour <= 18:
         greetings = "Good afternoon sir!"
 
     else:

@@ -13,9 +13,8 @@ def Weather():
     speak("What city do you want to know about?")
     city = takeCommand()
     if city:
-        response = requests.get(
-            f"https://api.openweathermap.org/data/2.5/weather?appid={config['WeatherAPI']}&q={urllib.parse.quote(city)}"
-        ).json()
+        url = f"https://api.openweathermap.org/data/2.5/weather?appid={config['WeatherAPI']}&q={urllib.parse.quote(city)}"
+        response = requests.get(url).json()
         if response["cod"] != "404":
             print(
                 "\33[93m"

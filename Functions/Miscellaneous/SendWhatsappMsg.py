@@ -10,9 +10,8 @@ def SendWhatsappMsg():
     speak("What is the message?")
     message = takeCommand()
     if message:
-        webbrowser.open(
-            f"https://web.whatsapp.com/send?&text={urllib.parse.quote(message)}"
-        )
+        url = f"https://web.whatsapp.com/send?&text={urllib.parse.quote(message)}"
+        webbrowser.open(url)
         speak("Sending message on whatsapp.")
         MidSound()
     else:

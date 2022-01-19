@@ -1,12 +1,13 @@
 import time
 import requests
 
+from Config.Config import config
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
 
 
 def LieSwatter():
-    response = requests.get("https://fun-api.sujalgoel.engineer/lieswatter").json()
+    response = requests.get("https://api.sujalgoel.engineer/fun/lieswatter", headers={"Authorization": f"Sujal {config['SujalAPI']}"}).json()["data"]
     answer = ""
     Truth = False
     question = response["question"]
@@ -33,7 +34,7 @@ def LieSwatter():
         + "\33[0m"
         + "\33[93m"
         + "\33[1m"
-        + "is it a lie?"
+        + "is it a lie? (yes/no)"
         + "\33[0m"
         + "\n"
     )

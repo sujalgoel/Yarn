@@ -3,6 +3,7 @@ import time
 import requests
 import pyautogui
 
+from Config.Config import config
 from Functions.ProjectBase import speak
 from Functions.PlaySound import MidSound
 
@@ -10,7 +11,7 @@ MainDir = os.getcwd()
 
 
 def GTP():
-    response = requests.get("https://fun-api.sujalgoel.engineer/pokemon").json()
+    response = requests.get("https://api.sujalgoel.engineer/fun/pokemon", headers={"Authorization": f"Sujal {config['SujalAPI']}"}).json()
 
     HiddenImage = requests.get(response["data"]["HiddenImage"]).content
     with open(f"{MainDir}\\Images\\hidden-image.png", "wb") as HiddenImageFile:
@@ -37,7 +38,8 @@ def GTP():
     speak("Now enter the pokemon name!")
 
     PokemonName = response["data"]["name"]
-    UserInput = input("Enter the pokemon name: ")
+    print("\33[93m" + "\33[1m" + "Enter the pokemon name: " + "\33[0m", end="")
+    UserInput = input()
     if UserInput:
         if UserInput.lower() == PokemonName.lower():
             print(

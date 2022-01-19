@@ -9,11 +9,10 @@ from Functions.ProjectBase import speak, takeCommand
 def YouTubePlay():
     print("\33[93m" + "\33[1m" + "What should I play on YouTube?" + "\33[0m" + "\n")
     speak("What should I play on YouTube?")
-    term = takeCommand()
-    if term:
-        response = requests.get(
-            f"https://fun-api.sujalgoel.engineer/ytsr?query={urllib.parse.quote(term)}"
-        ).json()
+    song = takeCommand()
+    if song:
+        url = f"https://api.sujalgoel.engineer/private/ytsr?query={urllib.parse.quote(song)}"
+        response = requests.get(url, headers = {'User-agent': 'Yarn@100305'}).json()
         if response:
             webbrowser.open(response["url"])
             title = response["title"]
