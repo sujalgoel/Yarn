@@ -2,6 +2,7 @@ import os
 import time
 import requests
 import youtube_dl
+import urllib.parse
 
 from pydub import AudioSegment
 from pydub.playback import play
