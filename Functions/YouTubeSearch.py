@@ -13,7 +13,7 @@ def YouTubeSearch():
         print(
             "\33[93m"
             + "\33[1m"
-            + "Searching "
+            + "Searching for"
             + "\33[0m"
             + "\33[92m"
             + "\33[1m"
@@ -25,7 +25,7 @@ def YouTubeSearch():
             + "\33[0m"
             + "\n"
         )
-        speak(f"Searching {term} on YouTube.")
+        speak(f"Searching for {term} on YouTube.")
         MidSound()
     else:
         YouTubeSearch()
