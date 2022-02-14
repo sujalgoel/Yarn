@@ -10,10 +10,10 @@ def Greet():
 
     OpeningSound()
 
-    if hour >= 5 and hour <= 12:
+    if 5 >= hour <= 12:
         greetings = "Good morning sir!"
 
-    elif hour >= 12 and hour <= 18:
+    elif 12 >= hour <= 18:
         greetings = "Good afternoon sir!"
 
     else:
