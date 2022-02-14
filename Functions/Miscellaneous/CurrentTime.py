@@ -13,7 +13,7 @@ def CurrentTime():
         + "\33[0m"
         + "\33[92m"
         + "\33[1m"
-        + f"{strTime.split(':')[0]} hours, {strTime.split(':')[1]} minutes and {strTime.split(':')[2]} {'seconds' if strTime.split(':')[2] > 1 else 'second'}."
+        + f"{strTime.split(':')[0]} hours, {strTime.split(':')[1]} minutes and {strTime.split(':')[2]} {'seconds' if int(strTime.split(':')[2]) > 1 else 'second'}."
         + "\33[0m"
         + "\n"
     )

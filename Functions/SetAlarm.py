@@ -34,14 +34,18 @@ def SetAlarm():
             speak("Please enter a valid time.")
             SetAlarm()
         AlarmThread = threading.Thread(
-            target=ThreadAlarm, args=(alarmHour, alarmMinute)
+            target=ThreadAlarm,
+            args=(
+                alarmHour,
+                alarmMinute,
+            ),
         )
         AlarmThread.start()
 
 
 def ThreadAlarm(alarmHour, alarmMinute):
     alarm_time = datetime.datetime.combine(
-        datetime.datetime.now(), datetime.time(alarmHour, alarmMinute)
+        datetime.datetime.now().date(), datetime.time(alarmHour, alarmMinute, 0)
     )
     waiting_time = alarm_time - datetime.datetime.now()
 
@@ -57,7 +61,7 @@ def ThreadAlarm(alarmHour, alarmMinute):
         SetAlarm()
 
     else:
-        print("\33[92m" + "\33[1m" + "Done setting the alarm." + "\33[0m" + "\n")
+        print("\33[92m" + "\33[1m" + "\nDone setting the alarm." + "\33[0m" + "\n")
         speak("Done setting the alarm.")
         MidSound()
         time.sleep((alarm_time - datetime.datetime.now()).total_seconds())
