@@ -1,4 +1,3 @@
-import urllib.parse
 import urllib.request
 
 from word2number import w2n

@@ -10,7 +10,7 @@ def GetAdvice():
     advice = requests.get(url, headers={"User-agent": config["User-Agent"]}).json()[
         "advice"
     ]
-    speak(f"Here is a piece of advice for you.")
+    speak("Here is a piece of advice for you.")
     print("\33[1m" + "Advice: " + "\33[92m" + advice + "\33[0m" + "\n")
     speak(advice)
     MidSound()

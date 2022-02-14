@@ -19,7 +19,7 @@ def GetAQI():
         + "\33[0m"
         + "\33[1m"
         + "\33[92m"
-        + f" and the dominent pollutant is "
+        + " and the dominent pollutant is "
         + "\33[0m"
         + "\33[1m"
         + "\33[93m"

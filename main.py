@@ -22,8 +22,8 @@ from Functions.YouTubeSearch import YouTubeSearch
 from Functions.NewsHeadlines import NewsHeadlines
 
 # Miscellaneous Functions
-from Functions.Miscellaneous.Help import Help
 from Functions.Miscellaneous.Quit import Quit
+from Functions.Miscellaneous.Help import ShowHelp
 from Functions.Miscellaneous.GetQuote import GetQuote
 from Functions.Miscellaneous.AirQuality import GetAQI
 from Functions.Miscellaneous.GetAdvice import GetAdvice
@@ -202,7 +202,7 @@ while True:
 
             elif "help" in command:
                 try:
-                    Help()
+                    ShowHelp()
                 except KeyboardInterrupt:
                     sys.exit()
 

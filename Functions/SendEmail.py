@@ -31,7 +31,7 @@ def SendEmail():
             print(
                 "\33[92m"
                 + "\33[1m"
-                + f"\nSuccessfully sent a mail to "
+                + "\nSuccessfully sent a mail to "
                 + "\33[0m"
                 + "\33[93m"
                 + "\33[1m"

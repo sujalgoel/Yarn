@@ -29,12 +29,11 @@ def ChatBot():
                 Flag = True
                 MidSound()
                 break
-            else:
-                url = f"https://api.sujalgoel.engineer/private/chatbot?message={urllib.parse.quote(message)}"
-                response = requests.get(
-                    url, headers={"User-agent": config["User-Agent"]}
-                ).json()["reply"]
-                print("\33[1m" + "Bot: " + "\33[92m" + response + "\33[0m" + "\n")
-                speak(response)
+            url = f"https://api.sujalgoel.engineer/private/chatbot?message={urllib.parse.quote(message)}"
+            response = requests.get(
+                url, headers={"User-agent": config["User-Agent"]}
+            ).json()["reply"]
+            print("\33[1m" + "Bot: " + "\33[92m" + response + "\33[0m" + "\n")
+            speak(response)
         else:
             ChatBot()

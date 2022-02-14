@@ -57,7 +57,7 @@ def ThreadAlarm(alarmHour, alarmMinute):
         SetAlarm()
 
     else:
-        print("\33[92m" + "\33[1m" + f"Done setting the alarm." + "\33[0m" + "\n")
+        print("\33[92m" + "\33[1m" + "Done setting the alarm." + "\33[0m" + "\n")
         speak("Done setting the alarm.")
         MidSound()
         time.sleep((alarm_time - datetime.datetime.now()).total_seconds())
