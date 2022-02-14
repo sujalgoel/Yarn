@@ -7,7 +7,10 @@ from Functions.ProjectBase import speak, takeCommand
 
 
 def LieSwatter():
-    response = requests.get("https://api.sujalgoel.engineer/fun/lieswatter", headers={"Authorization": f"Sujal {config['SujalAPI']}"}).json()["data"]
+    response = requests.get(
+        "https://api.sujalgoel.engineer/fun/lieswatter",
+        headers={"Authorization": f"Sujal {config['SujalAPI']}"},
+    ).json()["data"]
     answer = ""
     Truth = False
     question = response["question"]

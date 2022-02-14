@@ -1,7 +1,7 @@
 import random
 
+from Functions.ProjectBase import speak
 from Functions.PlaySound import MidSound
-from Functions.ProjectBase import speak, takeCommand
 
 
 def GTN():

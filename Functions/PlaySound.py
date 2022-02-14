@@ -25,3 +25,8 @@ def EndingSound():
 def LaughSound():
     play(AudioSegment.from_mp3(f"{MainDir}\\Sounds\\LaughSound.mp3"))
     time.sleep(0.6)
+
+
+def AlarmSound():
+    play(AudioSegment.from_mp3(f"{MainDir}\\Sounds\\AlarmSound.mp3"))
+    time.sleep(1)

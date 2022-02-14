@@ -11,7 +11,10 @@ MainDir = os.getcwd()
 
 
 def GTP():
-    response = requests.get("https://api.sujalgoel.engineer/fun/pokemon", headers={"Authorization": f"Sujal {config['SujalAPI']}"}).json()
+    response = requests.get(
+        "https://api.sujalgoel.engineer/fun/pokemon",
+        headers={"Authorization": f"Sujal {config['SujalAPI']}"},
+    ).json()
 
     HiddenImage = requests.get(response["data"]["HiddenImage"]).content
     with open(f"{MainDir}\\Images\\hidden-image.png", "wb") as HiddenImageFile:

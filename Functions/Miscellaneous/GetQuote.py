@@ -1,6 +1,7 @@
 import random
 import requests
 
+from Config.Config import config
 from Functions.ProjectBase import speak
 from Functions.PlaySound import MidSound
 
@@ -8,7 +9,7 @@ from Functions.PlaySound import MidSound
 def GetQuote():
     num = random.randint(1, 10)
     url = "https://api.sujalgoel.engineer/private/quote"
-    response = requests.get(url, headers={"User-agent": "Yarn@100305"}).json()
+    response = requests.get(url, headers={"User-agent": config["User-Agent"]}).json()
     quote = response["quote"]
     author = response["author"]
     if num % 2 == 0:

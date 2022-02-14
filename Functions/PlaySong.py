@@ -7,6 +7,8 @@ import urllib.request
 from pydub import AudioSegment
 from pydub.playback import play
 
+
+from Config.Config import config
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
 
@@ -62,7 +64,9 @@ def PlaySong():
     song = takeCommand()
     if song:
         url = f"https://api.sujalgoel.engineer/private/ytsr?query={urllib.parse.quote(song)}"
-        response = requests.get(url, headers = {'User-agent': 'Yarn@100305'}).json()
+        response = requests.get(
+            url, headers={"User-agent": config["User-Agent"]}
+        ).json()
         url = response["url"]
         Title = response["title"]
         Title = (

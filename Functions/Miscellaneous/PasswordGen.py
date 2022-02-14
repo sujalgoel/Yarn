@@ -8,9 +8,11 @@ from Functions.ProjectBase import speak, takeCommand
 
 def PasswordGen():
     try:
-        AlphaNum = list("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
         SpecialChar = list("@#$%=:?./|~>*()<")
-        
+        AlphaNum = list(
+            "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+        )
+
         Allowed = AlphaNum
         print(
             "\33[92m"

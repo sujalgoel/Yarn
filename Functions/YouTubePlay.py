@@ -2,6 +2,7 @@ import requests
 import webbrowser
 import urllib.parse
 
+from Config.Config import config
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
 
@@ -12,7 +13,9 @@ def YouTubePlay():
     song = takeCommand()
     if song:
         url = f"https://api.sujalgoel.engineer/private/ytsr?query={urllib.parse.quote(song)}"
-        response = requests.get(url, headers = {'User-agent': 'Yarn@100305'}).json()
+        response = requests.get(
+            url, headers={"User-agent": config["User-Agent"]}
+        ).json()
         if response:
             webbrowser.open(response["url"])
             title = response["title"]

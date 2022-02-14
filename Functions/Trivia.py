@@ -1,12 +1,15 @@
 import requests
 
 from Config.Config import config
+from Functions.ProjectBase import speak
 from Functions.PlaySound import MidSound
-from Functions.ProjectBase import speak, takeCommand
 
 
 def Trivia():
-    response = requests.get("https://api.sujalgoel.engineer/fun/trivia", headers={"Authorization": f"Sujal {config['SujalAPI']}"}).json()["data"]
+    response = requests.get(
+        "https://api.sujalgoel.engineer/fun/trivia",
+        headers={"Authorization": f"Sujal {config['SujalAPI']}"},
+    ).json()["data"]
 
     answer = response["answer"]
     options = response["options"]

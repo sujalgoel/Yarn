@@ -2,7 +2,7 @@ import urllib.parse
 import urllib.request
 
 from word2number import w2n
-from bs4 import BeautifulSoup as bs
+from bs4 import BeautifulSoup
 
 from Functions.PlaySound import MidSound
 from Functions.ProjectBase import speak, takeCommand
@@ -13,7 +13,7 @@ def NewsHeadlines():
         url = "https://news.google.com/news/rss"
         if url.lower().startswith("http"):
             news = urllib.request.urlopen(url).read()
-            headlines = bs(news, "xml").findAll("item")
+            headlines = BeautifulSoup(news, "xml").findAll("item")
             news_headlines = []
             for new in headlines:
                 news_headlines.append(new.title.text)
