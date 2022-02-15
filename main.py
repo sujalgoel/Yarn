@@ -36,15 +36,15 @@ from Functions.Miscellaneous.SendWhatsappMsg import SendWhatsappMsg
 from Functions.Miscellaneous.WikipediaSearch import WikipediaSearch
 
 # Greet Function
-    # try:
-    #     Greet()
-    #     if not os.path.exists("Music"):
-    #         os.makedirs("Music")
-    #     elif not os.path.exists("Images"):
-    #         os.makedirs("Images")
+try:
+    Greet()
+    if not os.path.exists("Music"):
+        os.makedirs("Music")
+    elif not os.path.exists("Images"):
+        os.makedirs("Images")
 
-    # except KeyboardInterrupt:
-    #     sys.exit()
+except KeyboardInterrupt:
+    sys.exit()
 
 # Main Code
 while True:
