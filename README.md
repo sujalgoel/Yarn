@@ -3,7 +3,7 @@
 # Yarn 🧶
 
 [![CodeFactor](https://www.codefactor.io/repository/github/sujalgoel/yarn/badge)](https://www.codefactor.io/repository/github/sujalgoel/yarn)
-[![license](https://nuggies.js.org/assets/img/license.ade17f5e.svg)](https://github.com/sujalgoel/yarn/blob/master/LICENSE)
+[![license](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-orange)](https://github.com/sujalgoel/yarn/blob/master/LICENSE)
 
 > Yarn is a speech assistant written in **python** with **hard-coded features.**
 
